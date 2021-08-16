@@ -15,6 +15,7 @@ namespace Cats
         }
 
         // On this line, add a no-argument constructor
+        //:)
 
         public void Sleep()
         {
