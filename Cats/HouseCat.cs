@@ -20,14 +20,31 @@ namespace Cats
             return !Hungry && !Tired;
         }
 
+        //public override string Noise()
+        //{
+        //    return "Hello, my name is " + Name + "!";
+        //}
+
         public override string Noise()
         {
-            return "Hello, my name is " + Name + "!";
+            if (IsSatisfied())
+            {
+                return "Hello, my name is " + Name + "!";
+            }
+            else
+            {
+                return base.Noise(); // prints "Meow!"
+            }
         }
 
         public string Purr()
         {
             return "I'm a housecat";
+        }
+
+        public HouseCat(string name)
+        {
+            Name = name;
         }
     }
 }
